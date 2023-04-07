@@ -16,9 +16,16 @@ function App() {
 function inputAlert(e) {
   console.log(e.target.value);
 }
+
 function addNewGuy(e) {
   e.preventDefault();
-  console.log("dodaje");
+  const jobInput = document.querySelector(".input1").value;
+  console.log(guy);
+  guy.push({
+    job: jobInput,
+    age: 42,
+    id: 51,
+  });
 }
 
 function Input() {
@@ -29,7 +36,7 @@ function Input() {
           <p className="text-[#b7b5fd]">Twoje aktualne stanowisko</p>
           <input
             onChange={inputAlert}
-            className="border-2 border-gray-300 focus:outline-none focus:border-[#3e20b2] rounded"
+            className="input1 border-2 border-gray-300 focus:outline-none focus:border-[#3e20b2] rounded"
             placeholder=""
           />
           <button
