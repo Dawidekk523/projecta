@@ -1,27 +1,5 @@
 import "./App.css";
-
-const guy = [
-  {
-    job: "pro-gamer",
-    age: 32,
-    id: 1,
-  },
-  {
-    job: "budowlaniec",
-    age: 32,
-    id: 2,
-  },
-  {
-    job: "programista",
-    age: 1023,
-    id: 3,
-  },
-  {
-    job: "informatyk",
-    age: 22,
-    id: 4,
-  },
-];
+import guy from "./guy.js";
 
 const guyInfo = guy.map((guy) => {
   return <OneItem guy={guy} key={guy.id} />;
